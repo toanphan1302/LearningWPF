@@ -8,7 +8,7 @@
         Title="Font Viewer" 
         Height="480" 
         Width="600">
-    <DockPanel>
+    <DockPanel Margin="8">
         <Border DockPanel.Dock ="Top"
                 CornerRadius="6"
                 BorderThickness="1"
@@ -32,14 +32,32 @@
                  Margin="8 0"
                  TextWrapping="Wrap"
                  ToolTip="Type here to change the preview text"
-                 Text="The quick brow fox jumps over the lazy dog.">
+                 Text="The quick brow fox jumps over the lazy dog." TextChanged="SampleText_TextChanged_1">
         </TextBox>
-        <TextBlock Text="{Binding ElementName=SampleText, Path=Text}"
+        <StackPanel Margin="8 0 8 8">
+            <TextBlock Text="{Binding ElementName=SampleText, Path=Text}"
                    FontFamily="{Binding ElementName=FontList,Path=SelectedItem}"
                    TextWrapping="Wrap"
-                   Margin="0 0 0 4">
-            
-        </TextBlock>
+                   FontSize="10"
+                   Margin="0 0 0 4"/>
+            <TextBlock Text="{Binding ElementName=SampleText, Path=Text}"
+                   FontFamily="{Binding ElementName=FontList,Path=SelectedItem}"
+                   TextWrapping="Wrap"
+                   FontSize="16"
+                   Margin="0 0 0 4"/>
+            <TextBlock Text="{Binding ElementName=SampleText, Path=Text}"
+                   FontFamily="{Binding ElementName=FontList,Path=SelectedItem}"
+                   TextWrapping="Wrap"
+                   FontSize="24"
+                   Margin="0 0 0 4" />
+            <TextBlock Text="{Binding ElementName=SampleText, Path=Text}"
+                   FontFamily="{Binding ElementName=FontList,Path=SelectedItem}"
+                   TextWrapping="Wrap"
+                   FontSize="32"
+                   Margin="0 0 0 4" />
+
+
+        </StackPanel>
 
 
     </DockPanel>

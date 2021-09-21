@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FontViewer", "FontViewer\Fo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FuckAround", "FuckAround\FuckAround.csproj", "{D2E94B6A-F4FF-450D-8D1E-D673DE435644}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlighmentAndMargin", "AlighmentAndMargin\AlighmentAndMargin.csproj", "{B0118511-24FF-4FF8-997F-3A7D43535A8A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UseAGrid", "UseAGrid\UseAGrid.csproj", "{6D801EAF-70CD-4203-99C6-5B72096A8F28}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{D2E94B6A-F4FF-450D-8D1E-D673DE435644}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D2E94B6A-F4FF-450D-8D1E-D673DE435644}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D2E94B6A-F4FF-450D-8D1E-D673DE435644}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0118511-24FF-4FF8-997F-3A7D43535A8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0118511-24FF-4FF8-997F-3A7D43535A8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0118511-24FF-4FF8-997F-3A7D43535A8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0118511-24FF-4FF8-997F-3A7D43535A8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D801EAF-70CD-4203-99C6-5B72096A8F28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D801EAF-70CD-4203-99C6-5B72096A8F28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D801EAF-70CD-4203-99C6-5B72096A8F28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D801EAF-70CD-4203-99C6-5B72096A8F28}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

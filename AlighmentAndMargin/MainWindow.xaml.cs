@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace FontViewer
+namespace AlighmentAndMargin
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -23,16 +23,6 @@ namespace FontViewer
         public MainWindow()
         {
             InitializeComponent();
-        }
-
-        private void SampleText_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void SampleText_TextChanged_1(object sender, TextChangedEventArgs e)
-        {
-
         }
     }
 }
