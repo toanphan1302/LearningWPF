@@ -24,5 +24,10 @@ namespace FontViewer
         {
             InitializeComponent();
         }
+
+        private void SampleText_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

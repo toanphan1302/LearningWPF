@@ -5,12 +5,43 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FontViewer"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <TextBlock Text="FontViewer"
-               FontSize="72"
-               HorizontalAlignment="Center"
-               VerticalAlignment="Center">
-         <!--i change something-->
-    </TextBlock>
+        Title="Font Viewer" 
+        Height="480" 
+        Width="600">
+    <DockPanel>
+        <Border DockPanel.Dock ="Top"
+                CornerRadius="6"
+                BorderThickness="1"
+                BorderBrush="Gray"
+                Background="LightGray"
+                Padding="8"
+                Margin="0 0 0 8">
+            <TextBlock FontSize="14"
+                   TextWrapping="Wrap"
+                   Text=" Select a font to view from the list below. You can change the text by typing in the region at the bottom"
+                   ></TextBlock>
+        </Border>
+        <ListBox x:Name="FontList"
+                 DockPanel.Dock="Left"
+                 ItemsSource="{x:Static Fonts.SystemFontFamilies}"
+                 Width="160">
+        </ListBox>
+        <TextBox x:Name="SampleText"
+                 DockPanel.Dock="Bottom"
+                 MinLines="4"
+                 Margin="8 0"
+                 TextWrapping="Wrap"
+                 ToolTip="Type here to change the preview text"
+                 Text="The quick brow fox jumps over the lazy dog.">
+        </TextBox>
+        <TextBlock Text="{Binding ElementName=SampleText, Path=Text}"
+                   FontFamily="{Binding ElementName=FontList,Path=SelectedItem}"
+                   TextWrapping="Wrap"
+                   Margin="0 0 0 4">
+            
+        </TextBlock>
+
+
+    </DockPanel>
 </Window>
    
