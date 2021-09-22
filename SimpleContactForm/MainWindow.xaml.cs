@@ -23,6 +23,14 @@ namespace SimpleContactForm
         public MainWindow()
         {
             InitializeComponent();
+
         }
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Contact saved.", "Save");
+        }
+
     }
+
 }
+
