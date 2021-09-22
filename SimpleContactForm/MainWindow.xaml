@@ -13,6 +13,7 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
@@ -41,16 +42,40 @@
 
         <Label Grid.Row="2"
                Content="Se_x:"
-               Target="{Binding ElementName=sex}" />
-        <TextBox x:Name="sex"
-                 Grid.Row="2"
-                 Grid.Column="1"/>
+               Target="{Binding ElementName=male}" />
+        <WrapPanel Grid.Row="2"
+                   Grid.Column="1"
+                   VerticalAlignment="Center">
+            <RadioButton x:Name="male"
+                         GroupName="sex"
+                         Content="Male"
+                         Margin="3"/>
+            <RadioButton GroupName="sex"
+                         Content="Female"
+                         Margin="3"/>
+        </WrapPanel>
 
         <Label Grid.Row="3"
+               Content="_Education"
+               Target="{Binding ElementName=highSchool}"/>
+        <WrapPanel Grid.Row="3"
+                   Grid.Column="1">
+            <CheckBox x:Name="highSchool"
+                      Content="High School"
+                      Margin="2"/>
+            <CheckBox Content="Bachelor's"
+                      Margin="2"/>
+            <CheckBox Content="Master's"
+                      Margin="2"/>
+            <CheckBox Content="Doctorate"
+                      Margin="2"/>
+        </WrapPanel>
+
+        <Label Grid.Row="4"
                Content="Additional _Notes:"
                Target="{Binding ElementName=additionalNottes}" />
         <TextBox x:Name="additionalNottes"
-                 Grid.Row="3"
+                 Grid.Row="4"
                  Grid.Column="1"
                  MinLines="5"
                  AcceptsReturn="True"
@@ -59,10 +84,11 @@
                  VerticalAlignment="Stretch"
                  SpellCheck.IsEnabled="True"
                  ToolTip="Type addtional notes here."/>
-        <Button Grid.Row="4"
+        <Button Grid.Row="5"
                 Grid.Column="1"
-                HorizontalAlignment="Right"
-                Content="Save"
-                Click="Button_Click"/>
+                HorizontalAlignment="Right"             
+                Click="Button_Click">
+            <AccessText>_Save</AccessText>
+        </Button>
     </Grid>
 </Window>
