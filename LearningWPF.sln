@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlighmentAndMargin", "Aligh
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UseAGrid", "UseAGrid\UseAGrid.csproj", "{6D801EAF-70CD-4203-99C6-5B72096A8F28}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsingDecorators", "UsingDecorators\UsingDecorators.csproj", "{C136E6B7-0FE7-4C4B-AEFC-FD98D3FC8370}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleContactForm", "SimpleContactForm\SimpleContactForm.csproj", "{661C4CBF-9306-4EDA-BCD3-88D861E9F9F0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{6D801EAF-70CD-4203-99C6-5B72096A8F28}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D801EAF-70CD-4203-99C6-5B72096A8F28}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D801EAF-70CD-4203-99C6-5B72096A8F28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C136E6B7-0FE7-4C4B-AEFC-FD98D3FC8370}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C136E6B7-0FE7-4C4B-AEFC-FD98D3FC8370}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C136E6B7-0FE7-4C4B-AEFC-FD98D3FC8370}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C136E6B7-0FE7-4C4B-AEFC-FD98D3FC8370}.Release|Any CPU.Build.0 = Release|Any CPU
+		{661C4CBF-9306-4EDA-BCD3-88D861E9F9F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{661C4CBF-9306-4EDA-BCD3-88D861E9F9F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{661C4CBF-9306-4EDA-BCD3-88D861E9F9F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{661C4CBF-9306-4EDA-BCD3-88D861E9F9F0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -17,9 +17,15 @@
                 Padding="8"
                 Margin="0 0 0 8">
             <TextBlock FontSize="14"
-                   TextWrapping="Wrap"
-                   Text=" Select a font to view from the list below. You can change the text by typing in the region at the bottom"
-                   ></TextBlock>
+                   TextWrapping="Wrap" >
+                   <Bold><Italic>Instruction:</Italic></Bold>
+                   <LineBreak />
+                   Select a <Underline>font</Underline> to view from the list
+                   <Italic>below</Italic>.
+                   <Span FontSize="10">
+                       You can change the text by typing in the region at the bottom
+                   </Span>
+                   </TextBlock>
         </Border>
         <ListBox x:Name="FontList"
                  DockPanel.Dock="Left"
