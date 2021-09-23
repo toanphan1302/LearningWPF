@@ -28,9 +28,19 @@
                    </TextBlock>
         </Border>
         <ListBox x:Name="FontList"
+                 DataContext="{x:Static Fonts.SystemFontFamilies}"
                  DockPanel.Dock="Left"
-                 ItemsSource="{x:Static Fonts.SystemFontFamilies}"
+                 ItemsSource="{Binding}"                 
                  Width="160">
+            <ListBox.ToolTip>
+                    <ToolTip>
+                           <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{Binding Path=Count,
+                                                         Mode=OneTime}"/>
+                                <TextBlock Text=" fonts are installed." />
+                           </StackPanel>
+                    </ToolTip>
+            </ListBox.ToolTip>
         </ListBox>
         <TextBox x:Name="SampleText"
                  DockPanel.Dock="Bottom"
