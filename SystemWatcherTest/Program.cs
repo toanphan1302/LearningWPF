@@ -28,9 +28,9 @@ namespace SystemWatcherTest
             watcher.Renamed += new RenamedEventHandler(LogFileSystemRenaming);
             watcher.Error += new ErrorEventHandler(LogBufferError);
 
-            while (true){ 
+            
             watcher.EnableRaisingEvents = true;
-            };
+            while (true) { };
 
             /// <summary>
             /// Log buffer overloading errors.

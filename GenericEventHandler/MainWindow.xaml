@@ -1,0 +1,17 @@
+﻿<Window x:Class="GenericEventHandler.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GenericEventHandler"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel ButtonBase.Click="StackPanel_Click">
+        <TextBlock x:Name="Output"
+                   HorizontalAlignment="Center"
+                   Text="What color will you choose?" />
+        <Button Content="Red" Foreground="Red"/>
+        <Button Content="Green" Foreground="Green"/>
+        <Button Content="Blue" Foreground="Blue"/>
+    </StackPanel>
+</Window>

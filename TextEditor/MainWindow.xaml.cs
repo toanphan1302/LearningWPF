@@ -29,5 +29,29 @@ namespace TextEditor
             if (_documentManager.OpenDocument())
                 status.Text = "Document loaded.";
         }
+
+        private void TextEditorToolBar_SelectionChanged (object sender, SelectionChangedEventArgs e)
+        {
+            if (toolBar.IsSynchronizing) return;
+
+            ComboBox source = e.OriginalSource as ComboBox;
+            if (source == null) return;
+
+            switch (source.Name)
+            {
+                case "fonts":
+                    _documentManager.ApplyToSelection(TextBlock.FontFamilyProperty, source.SelectedItem);
+                    break;
+                case "fontSize":
+                    _documentManager.ApplyToSelection(TextBlock.FontSizeProperty, source.SelectedItem);
+                    break;
+            }
+            body.Focus();
+        }
+
+        private void body_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+            toolBar.SynchronizeWith(body.Selection);
+        }
     }
 }

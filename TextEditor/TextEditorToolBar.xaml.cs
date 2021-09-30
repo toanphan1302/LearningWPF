@@ -33,5 +33,50 @@ namespace TextEditor
                 fontSize.Items.Add(i);
             }
         }
+
+        public bool IsSynchronizing { get; private set; }
+
+        public void SynchronizeWith(TextSelection selection)
+        {
+            IsSynchronizing = true;
+
+            Synchronize<Double>(selection, TextBlock.FontSizeProperty, SetFontSize);
+            Synchronize<FontWeight>(selection, TextBlock.FontWeightProperty, SetFontWeight);
+            Synchronize<FontStyle>(selection, TextBlock.FontStyleProperty, SetFontSytle);
+            Synchronize<TextDecorationCollection>(selection, TextBlock.TextDecorationsProperty, SetTextDecoration);
+            Synchronize<FontFamily>(selection, TextBlock.FontFamilyProperty, SetFontFamily);
+
+            IsSynchronizing = false;
+        }
+
+
+        private void Synchronize<T>(TextSelection selection,
+            DependencyProperty property, Action<T> methodToCall)
+        {
+            object value = selection.GetPropertyValue(property);
+            if (value != DependencyProperty.UnsetValue) methodToCall((T)value);
+        }
+
+
+        private void SetFontSize(double size)
+        {
+            fontSize.SelectedValue = size;
+        }
+        private void SetFontWeight(FontWeight weight)
+        {
+            boldButton.IsChecked = ((FontWeight)weight == FontWeights.Bold);
+        }
+        private void SetFontSytle(FontStyle style)
+        {
+            italicButton.IsChecked = style == FontStyles.Italic;
+        }
+        private void SetTextDecoration(TextDecorationCollection decoration)
+        {
+            underlineButton.IsChecked = decoration == TextDecorations.Underline;
+        }
+        private void SetFontFamily(FontFamily family)
+        {
+            fonts.SelectedItem = family;
+        }
     }
 }
