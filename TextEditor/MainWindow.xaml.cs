@@ -87,5 +87,15 @@ namespace TextEditor
         {
             e.CanExecute = _documentManager.CanSaveDocument();
         }
+
+        private void PrintDocument(object sender, ExecutedRoutedEventArgs e)
+        {
+            PrintDialog dlg = new PrintDialog();
+            if(dlg.ShowDialog() == true)
+            {
+                dlg.PrintDocument(
+                    (((IDocumentPaginatorSource)body.Document).DocumentPaginator), "Text Editor Printing");
+            }
+        }
     }
 }

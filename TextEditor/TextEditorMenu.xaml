@@ -13,6 +13,7 @@
             <MenuItem Command="ApplicationCommands.Save"/>
             <MenuItem Command="ApplicationCommands.SaveAs"/>
             <Separator/>
+            <MenuItem Command="ApplicationCommands.Print"/>
             <MenuItem Command="ApplicationCommands.Close"/>
         </MenuItem>
         <MenuItem Header="_Edit">

@@ -35,8 +35,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ReachFramework" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Printing" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -56,6 +58,8 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="DocumentManager.cs" />
+    <Compile Include="PrintingPaginator.cs" />
+    <Compile Include="PrintManager.cs" />
     <Compile Include="TextEditorMenu.xaml.cs">
       <DependentUpon>TextEditorMenu.xaml</DependentUpon>
     </Compile>
