@@ -60,6 +60,9 @@
     <Compile Include="DocumentManager.cs" />
     <Compile Include="PrintingPaginator.cs" />
     <Compile Include="PrintManager.cs" />
+    <Compile Include="PrintPreviewDialog.xaml.cs">
+      <DependentUpon>PrintPreviewDialog.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TextEditorMenu.xaml.cs">
       <DependentUpon>TextEditorMenu.xaml</DependentUpon>
     </Compile>
@@ -78,6 +81,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="PrintPreviewDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="TextEditorMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
