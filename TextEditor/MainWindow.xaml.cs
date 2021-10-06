@@ -21,11 +21,13 @@ namespace TextEditor
     public partial class MainWindow : Window
     {
         private DocumentManager _documentManager;
+        private PrintManager _printManager;
         public MainWindow()
         {
             InitializeComponent();
 
             _documentManager = new DocumentManager(body);
+            _printManager = new PrintManager(body);
             if (_documentManager.OpenDocument())
                 status.Text = "Document loaded.";
         }
@@ -96,6 +98,11 @@ namespace TextEditor
                 dlg.PrintDocument(
                     (((IDocumentPaginatorSource)body.Document).DocumentPaginator), "Text Editor Printing");
             }
+        }
+
+        private void PrintPreview(object sender, ExecutedRoutedEventArgs e)
+        {
+            _printManager.PrintPreview();
         }
     }
 }

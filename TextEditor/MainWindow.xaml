@@ -20,6 +20,8 @@
                         Executed="ApplicationClose"/>
         <CommandBinding Command="ApplicationCommands.Print"
                         Executed="PrintDocument"/>
+        <CommandBinding Command="ApplicationCommands.PrintPreview"
+                        Executed="PrintPreview"/>
     </Window.CommandBindings>
     <Window.InputBindings>
         <MouseBinding Gesture="Control+WheelClick"

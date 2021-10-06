@@ -73,5 +73,11 @@ namespace TextEditor
                     )
                 );
         }
+
+        public void PrintPreview()
+        {
+            PrintPreviewDialog dlg = new PrintPreviewDialog(this);
+            dlg.ShowDialog();
+        }
     }
 }
