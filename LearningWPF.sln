@@ -29,7 +29,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericEventHandler", "Gene
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PreviewEvents", "PreviewEvents\PreviewEvents.csproj", "{06849A0E-5D27-43C6-A964-ADC31F0ED269}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileSystemWatcher2", "FileSystemWatcher2\FileSystemWatcher2.csproj", "{0091C6AD-E1E8-4E16-AF9D-E83AF236026F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FileSystemWatcher2", "FileSystemWatcher2\FileSystemWatcher2.csproj", "{0091C6AD-E1E8-4E16-AF9D-E83AF236026F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactManager", "ContactManager\ContactManager.csproj", "{A23DF89C-0B32-4327-87D4-B7D402321ABF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -93,6 +95,10 @@ Global
 		{0091C6AD-E1E8-4E16-AF9D-E83AF236026F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0091C6AD-E1E8-4E16-AF9D-E83AF236026F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0091C6AD-E1E8-4E16-AF9D-E83AF236026F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A23DF89C-0B32-4327-87D4-B7D402321ABF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A23DF89C-0B32-4327-87D4-B7D402321ABF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A23DF89C-0B32-4327-87D4-B7D402321ABF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A23DF89C-0B32-4327-87D4-B7D402321ABF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
