@@ -60,6 +60,8 @@
     <Compile Include="Model\ContactRepository.cs" />
     <Compile Include="Model\States.cs" />
     <Compile Include="Notifier.cs" />
+    <Compile Include="Presenters\ApplicationPresenter.cs" />
+    <Compile Include="Presenters\PresenterBase.cs" />
     <Compile Include="UserControls\SearchBar.xaml.cs">
       <DependentUpon>SearchBar.xaml</DependentUpon>
     </Compile>
@@ -114,7 +116,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Presenters\" />
     <Folder Include="Resources\" />
     <Folder Include="Views\" />
   </ItemGroup>
