@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ContactManager.Presenters;
 
 namespace ContactManager.UserControls
 {
@@ -23,6 +24,21 @@ namespace ContactManager.UserControls
         public SideBar()
         {
             InitializeComponent();
+        }
+
+        public ApplicationPresenter Presenter
+        {
+            get { return DataContext as ApplicationPresenter; }
+        }
+
+        private void New_Click(Object sender, RoutedEventArgs e)
+        {
+            Presenter.NewContact();
+        }
+
+        private void ViewAll_Click(object sender, RoutedEventArgs e)
+        {
+            Presenter.DisplayAllContacts();
         }
     }
 }

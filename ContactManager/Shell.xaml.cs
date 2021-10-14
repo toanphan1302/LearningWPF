@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using ContactManager.Presenters;
+using ContactManager.Model;
 
 namespace ContactManager
 {
@@ -24,6 +25,7 @@ namespace ContactManager
         public Shell()
         {
             InitializeComponent();
+            DataContext = new ApplicationPresenter(this, new ContactRepository());
         }
 
         public void AddTab<T>(PresenterBase<T> presenter)
@@ -45,7 +47,7 @@ namespace ContactManager
                 newTab = new TabItem();
 
                 Binding headerBinding = new Binding(presenter.TabHeaderPath);
-                BindingOperations.SetBinding(
+                BindingOperations.SetBinding(   
                     newTab,
                     TabItem.HeaderProperty,
                     headerBinding

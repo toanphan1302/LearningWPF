@@ -6,7 +6,24 @@
              xmlns:local="clr-namespace:ContactManager.UserControls"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Bottom"
+                    Margin="4"
+                    >
+            <Button Content="New Contact"
+                    Click="New_Click"/>
+            <Button Content="View All"
+                    Click="ViewAll_Click"/>
+        </StackPanel>
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <ItemsControl Width="250"
+                          VerticalAlignment="Stretch"
+                          BorderThickness="0"
+                          ItemsSource="{Binding CurrentContacts}"
+                          >
+                
+            </ItemsControl>
+        </ScrollViewer>
             
-    </Grid>
+    </DockPanel>
 </UserControl>

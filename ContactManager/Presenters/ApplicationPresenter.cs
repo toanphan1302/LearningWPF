@@ -105,12 +105,20 @@ namespace ContactManager.Presenters
         {
             View.RemoveTab(presenter);
         }
-        private void OpenContact(Contact contact)
+        public void OpenContact(Contact contact)
         {
-            throw new NotImplementedException();
+            if (contact == null) return;
+
+            View.AddTab(
+                new EditContactPresenter(
+                    this,
+                    new Views.EditContactView(),
+                    contact
+                    )
+                );
         }
 
-        private void DisplayAllContacts()
+        public void DisplayAllContacts()
         {
             throw new NotImplementedException();
         }
