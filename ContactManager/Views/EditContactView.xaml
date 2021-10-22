@@ -7,7 +7,8 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <DockPanel Margin="5">
-        <Border DockPanel.Dock="Top">
+        <Border DockPanel.Dock="Top"
+                Style="{StaticResource header}">
             <DockPanel LastChildFill="False">
                 <TextBlock DockPanel.Dock="Left"
                            Text="{Binding Contact.LastName}" />
@@ -20,7 +21,8 @@
             </DockPanel>
         </Border>
 
-        <StackPanel DockPanel.Dock="Bottom">
+        <StackPanel DockPanel.Dock="Bottom"
+                    Style="{StaticResource buttonPanel}">
             <Button Content="Save"
                     Click="Save_Click" />
             <Button Content="Delete"
@@ -30,9 +32,10 @@
         </StackPanel>
 
         <WrapPanel>
-            <GroupBox>
+            <GroupBox BorderBrush="{StaticResource lightBlueBrush}">
                 <GroupBox.Header>
-                    <Border>
+                    <Border Background="{StaticResource lightBlueBrush}"
+                            Style="{StaticResource groupBoxHeader}">
                         <TextBlock Text="General" />
                     </Border>
                 </GroupBox.Header>
@@ -60,11 +63,16 @@
                         <Viewbox Margin="2 2 4 4">
                             <Image Source="{Binding Contact.ImagePath}" />
                         </Viewbox>
-                        <Border BorderThickness="2"
+                        <Border BorderBrush="{StaticResource lightBlueBrush}"
+                                BorderThickness="2"
                                 Background="Transparent"
                                 CornerRadius="6"
                                 Margin="0 0 2 2" />
-                        <Button Background="White"
+                        <Button Style="{StaticResource openButton}"
+                                Background="White"
+                                Foreground="{StaticResource lightBlueBrush}"
+                                BorderBrush="{StaticResource lightBlueBrush}"
+                                ToolTip="Change Picture"
                                 Click="SelectImage_Click" />
                     </Grid>
 
@@ -101,6 +109,158 @@
                              Grid.Column="2"
                              Grid.Row="3"
                              Text="{Binding Contact.JobTitle}" />
+                </Grid>
+            </GroupBox>
+            <GroupBox BorderBrush="{StaticResource greenBrush}">
+                <GroupBox.Header>
+                    <Border Background="{StaticResource greenBrush}"
+                            Style="{StaticResource groupBoxHeader}">
+                        <TextBlock Text="Address" />
+                    </Border>
+                </GroupBox.Header>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="150" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="150" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Label Content="Line_1:"
+                           Target="{Binding ElementName=line1}" />
+                    <TextBox x:Name="line1"
+                             Grid.Column="1"
+                             Grid.ColumnSpan="3"
+                             Text="{Binding Contact.Address.Line1}"/>
+
+                    <Label Grid.Row="1"
+                           Content="Line_2:"
+                           Target="{Binding ElementName=line2}" />
+                    <TextBox x:Name="line2"
+                             Grid.Row="1"
+                             Grid.Column="1"
+                             Grid.ColumnSpan="3"
+                             Text="{Binding Contact.Address.Line2}"/>
+
+                    <Label Grid.Row="2"
+                           Content="Ci_ty:"
+                           Target="{Binding ElementName=city}" />
+                    <TextBox x:Name="city"
+                             Grid.Row="2"
+                             Grid.Column="1"
+                             Text="{Binding Contact.Address.City}"/>
+
+                    <Label Grid.Row="2"
+                           Grid.Column="2"
+                           Content="_State:"
+                           Target="{Binding ElementName=state}" />
+                    <TextBox x:Name="state"
+                             Grid.Row="2"
+                             Grid.Column="3"
+                             Text="{Binding Contact.Address.State}"/>
+
+                    <Label Grid.Row="3"
+                           Content="_Zip:"
+                           Target="{Binding ElementName=zip}" />
+                    <TextBox x:Name="zip"
+                             Grid.Row="3"
+                             Grid.Column="1"
+                             Text="{Binding Contact.Address.Zip}"/>
+
+                    <Label Grid.Row="3"
+                           Grid.Column="2"
+                           Content="Countr_y:"
+                           Target="{Binding ElementName=country}" />
+                    <TextBox x:Name="country"
+                             Grid.Row="3"
+                             Grid.Column="3"
+                             Text="{Binding Contact.Address.Country}"/>
+                </Grid>
+            </GroupBox>
+
+            <GroupBox BorderBrush="{StaticResource redBrush}">
+                <GroupBox.Header>
+                    <Border Background="{StaticResource redBrush}"
+                            Style="{StaticResource groupBoxHeader}">
+                        <TextBlock Text="Phone" />
+                    </Border>
+                </GroupBox.Header>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="150" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Label Content="_Office:"
+                           Target="{Binding ElementName=office}"/>
+                    <TextBox x:Name="office"
+                             Grid.Column="1"
+                             Text="{Binding Contact.OfficePhone}" />
+
+                    <Label Grid.Row="1"
+                           Content="_Cell:"
+                           Target="{Binding ElementName=cell}"/>
+                    <TextBox x:Name="cell"
+                             Grid.Row="1"
+                             Grid.Column="1"
+                             Text="{Binding Contact.CellPhone}" />
+
+                    <Label Grid.Row="2"
+                           Content="_Home:"
+                           Target="{Binding ElementName=home}"/>
+                    <TextBox x:Name="home"
+                             Grid.Row="2"
+                             Grid.Column="1"
+                             Text="{Binding Contact.HomePhone}" />
+                </Grid>
+            </GroupBox>
+
+            <GroupBox BorderBrush="{StaticResource brownBrush}">
+                <GroupBox.Header>
+                    <Border Background="{StaticResource brownBrush}"
+                            Style="{StaticResource groupBoxHeader}">
+                        <TextBlock Text="Email" />
+                    </Border>
+                </GroupBox.Header>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="200" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Label Content="_Primary:"
+                           Target="{Binding ElementName=primaryEmail}"/>
+                    <TextBox x:Name="primaryEmail"
+                             Grid.Column="1"
+                             Text="{Binding Contact.PrimaryEmail}" />
+
+                    <Label Grid.Row="1"
+                           Content="S_econdary:"
+                           Target="{Binding ElementName=secondaryEmail}"/>
+                    <TextBox x:Name="secondaryEmail"
+                             Grid.Row="1"
+                             Grid.Column="1"
+                             Text="{Binding Contact.SecondaryEmail}" />
+
+                    
                 </Grid>
             </GroupBox>
         </WrapPanel>

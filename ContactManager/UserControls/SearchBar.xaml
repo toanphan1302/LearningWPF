@@ -6,7 +6,27 @@
              xmlns:local="clr-namespace:ContactManager.UserControls"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-            
-    </Grid>
+    <Border Background="{StaticResource lightBlueBrush}"
+            CornerRadius="6"
+            Margin="4"
+            Padding="4">
+        <DockPanel LastChildFill="False">
+            <TextBlock DockPanel.Dock="Left"
+                       Text="Contact Manager"
+                       FontWeight="Bold"
+                       Foreground="White"
+                       VerticalAlignment="Center"
+                       FontSize="22"
+                       FontFamily="Trebuchet" />
+            <TextBox x:Name="searchText"
+                     DockPanel.Dock="Right"
+                     Width="150"
+                     Background="White"
+                     TextChanged="SearchText_Changed" />
+            <Label DockPanel.Dock="Right"
+                   Content="Search:"
+                   FontWeight="Bold"
+                   Foreground="White" />
+        </DockPanel>
+    </Border>
 </UserControl>

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ContactManager.Presenters;
 
 namespace ContactManager.UserControls
 {
@@ -23,6 +24,16 @@ namespace ContactManager.UserControls
         public SearchBar()
         {
             InitializeComponent();
+        }
+
+        public ApplicationPresenter Presenter
+        {
+            get { return DataContext as ApplicationPresenter; }
+        }
+
+        private void SearchText_Changed(object sender, TextChangedEventArgs e)
+        {
+            Presenter.Search(searchText.Text);
         }
     }
 }
